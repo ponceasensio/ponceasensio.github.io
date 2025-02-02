@@ -15,17 +15,53 @@
             line-height: 1.6;
         }
 
-        /* Cabecera */
+        /* Cabecera - Imagen de fondo */
         header {
-            background: linear-gradient(135deg, #0077b6, #023e8a);
+            background-image: url('background.png'); /* Ruta de la imagen */
+            background-size: cover; /* Cubre todo el espacio */
+            background-position: center; /* Centra la imagen */
             padding: 60px 0;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative; /* Para el overlay */
+        }
+
+        /* Overlay para mejorar la legibilidad */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5); /* Fondo blanco semitransparente */
+            z-index: 1;
         }
 
         .logo {
-            width: 300px; /* Aumenté el tamaño del logo */
+            width: 300px;
             margin-bottom: 20px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            position: relative; /* Para que esté sobre el overlay */
+            z-index: 2;
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 2.8em;
+            margin: 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative; /* Para que esté sobre el overlay */
+            z-index: 2;
+        }
+
+        .description {
+            font-size: 1.2em;
+            color: #555555;
+            margin-bottom: 30px;
+            position: relative; /* Para que esté sobre el overlay */
+            z-index: 2;
         }
 
         /* Contenido principal */
@@ -34,20 +70,6 @@
             margin: 50px auto;
             padding: 0 20px;
             text-align: center;
-        }
-
-        h1 {
-            color: white;
-            font-size: 2.8em;
-            margin: 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .description {
-            font-size: 1.2em;
-            color: #e9ecef;
-            margin-bottom: 30px;
         }
 
         /* Tarjeta de contacto */
@@ -59,6 +81,7 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             text-align: left;
             display: inline-block;
+            border: 1px solid #CCCCCC;
         }
 
         .contact-item {
@@ -72,21 +95,23 @@
             width: 24px;
             margin-right: 15px;
             opacity: 0.8;
+            filter: brightness(0.5); /* Iconos en gris */
         }
 
         a {
-            color: #023e8a;
+            color: #444444;
             text-decoration: none;
             transition: color 0.3s;
+            font-weight: 500;
         }
 
         a:hover {
-            color: #0077b6;
+            color: #666666;
         }
 
         /* Pie de página */
         footer {
-            background: #2c3e50;
+            background: #666666;
             color: white;
             padding: 30px 0;
             text-align: center;
@@ -100,7 +125,7 @@
             }
 
             .logo {
-                width: 200px; /* Tamaño del logo en móviles */
+                width: 200px;
             }
 
             .main-content {
