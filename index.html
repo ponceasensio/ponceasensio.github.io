@@ -12,65 +12,64 @@
             padding: 0;
             color: #2c3e50;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        /* Cabecera mejorada */
+        /* Cabecera full-width */
         header {
-            background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.98)), url('background.png');
+            background: url('background.png') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
-            padding: 4rem 1rem;
+            width: 100%;
+            min-height: 100vh;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
         }
 
         .logo {
-            width: 280px;
-            margin: 0 auto 2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: scale(1.03);
+            width: 400px;
+            margin: 15vh auto 2rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
         }
 
         h1 {
-            color: #2c3e50;
-            font-size: 2.8em;
+            color: #ffffff;
+            font-size: 3em;
             margin: 0 0 1rem;
-            font-weight: 600;
-            letter-spacing: -0.5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .description {
-            font-size: 1.2em;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto 3rem;
-            line-height: 1.8;
+            font-size: 1.3em;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
 
         /* Contenido principal */
         .main-content {
-            max-width: 800px;
-            margin: -50px auto 4rem;
-            padding: 0 1rem;
+            max-width: 1000px;
+            margin: -80px auto 50px;
+            padding: 50px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
         }
 
-        /* Tarjeta de contacto mejorada */
+        /* Tarjeta de contacto */
         .contact-card {
             background: white;
             border-radius: 12px;
-            padding: 2.5rem;
-            margin: 0 auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border: 1px solid rgba(0,0,0,0.05);
+            padding: 40px;
+            margin: 30px auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             text-align: center;
         }
 
         .contact-item {
-            margin: 1.5rem 0;
+            margin: 25px 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -79,45 +78,34 @@
         }
 
         .contact-item img {
-            width: 28px;
-            opacity: 0.8;
+            width: 32px;
             filter: invert(35%) sepia(13%) saturate(1200%) hue-rotate(175deg);
         }
 
         .contact-item a {
             color: #2c3e50;
             text-decoration: none;
+            font-weight: 600;
             transition: color 0.3s;
-            font-weight: 500;
         }
 
         .contact-item a:hover {
             color: #0077b6;
         }
 
-        /* Pie de página mejorado */
+        /* Pie de página */
         footer {
-            background: #f8f9fa;
-            color: #666;
-            padding: 3rem 1rem;
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
             text-align: center;
-            border-top: 1px solid #eee;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-            font-size: 0.95em;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            header {
-                padding: 2rem 1rem;
-            }
-
             .logo {
-                width: 200px;
-                margin-bottom: 1.5rem;
+                width: 250px;
+                margin-top: 10vh;
             }
 
             h1 {
@@ -125,19 +113,17 @@
             }
 
             .description {
-                font-size: 1em;
-                padding: 0 1rem;
+                font-size: 1.1em;
+            }
+
+            .main-content {
+                margin: -40px auto 30px;
+                padding: 30px 15px;
             }
 
             .contact-card {
-                padding: 1.5rem;
+                padding: 25px;
                 width: 90%;
-            }
-
-            .contact-item {
-                flex-direction: column;
-                text-align: center;
-                gap: 0.5rem;
             }
         }
     </style>
@@ -163,12 +149,6 @@
         </div>
     </div>
 
-    <footer>
-        <p>© 2025 Ponce Asensio - Servicios profesionales de recogida de muestras</p>
-        <p>Análisis realizados en laboratorios colaboradores certificados</p>
-    </footer>
-</body>
-</html>
     <footer>
         <p>© 2025 Ponce Asensio - Servicios profesionales de recogida de muestras</p>
         <p>Análisis realizados en laboratorios colaboradores certificados</p>
