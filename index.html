@@ -18,11 +18,12 @@
         /* Cabecera - Imagen de fondo */
         header {
             background-image: url('background.png'); /* Ruta de la imagen */
-            background-size: cover; /* La imagen cubre todo el ancho */
-            background-position: center; /* Centrar la imagen */
+            background-size: 100% 100%; /* La imagen cubre toda la cabecera */
+            background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed; /* Mantiene el fondo fijo */
             width: 100%;
-            min-height: 100vh; /* Que ocupe toda la pantalla */
+            height: 100vh; /* Que ocupe el 100% de la pantalla */
             display: flex;
             flex-direction: column;
             align-items: center;
